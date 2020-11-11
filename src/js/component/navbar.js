@@ -1,17 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Navlist } from "./navlist";
+import "../../styles/navbar.css";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
+		<>
+			<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+				<Link className="navbar-brand" to="/">
+					<img src="../img/star-wars-4.svg" alt="star wars logo" className="star-wars-logo" />
 				</Link>
-			</div>
-		</nav>
+				<button
+					className="navbar-toggler"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span className="navbar-toggler-icon" />
+				</button>
+				<Navlist />
+			</nav>
+		</>
 	);
 };
